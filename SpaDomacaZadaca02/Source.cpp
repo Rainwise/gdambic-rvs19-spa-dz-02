@@ -14,7 +14,6 @@ int main() {
     GameLogic game(gridSizeX, gridSizeY);
 
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT), "Game of life !");
-    window.setFramerateLimit(120);
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -38,8 +37,8 @@ int main() {
         }
         window.display();
 
-        // // Refresh svake 2 sekunde, gore koristim framelimit na 60 da bude smooth pa je sleep zakomentiran
-        // sf::sleep(sf::seconds(2)); 
+        // // Refresh svake 2 sekunde
+        sf::sleep(sf::seconds(2)); 
 
     }
     return 0;
